@@ -11,7 +11,7 @@ Visão geral do Amazon EC2
 </div>
 
 <p align="center">
-  <img src="assets/1-amazon-ec2-architecture.png" alt="Descrição da imagem" width="600" height="300">
+  <img src="assets/1-amazon-ec2-architecture.png" alt="Descrição da imagem" width="600" height="500">
 </p>
 
 
