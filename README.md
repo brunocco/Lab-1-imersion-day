@@ -15,11 +15,14 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 </p>
 
 ## Crie seu próprio servidor web seguindo os laboratórios na ordem abaixo:
-- [✔️] Tarefa 1 - Criar um novo par de chaves;
-- [✔️] Tarefa 2 - Inicie uma instância do servidor web;
-- [✔️] Tarefa 3 - Conecte-se à sua instância Linux (caso você use S.O. Linux)
-- [✔️] Tarefa 4 - Conecte-se à instância EC2 usando PuTTY (caso você use S.O. Windows)
-- [✔️] Tarefa 4 - Recursos de Limpeza
+## Sumário
+
+- [✔️] [Tarefa 1 - Criar um novo par de chaves](#criar-um-novo-par-de-chaves)
+- [✔️] [Tarefa 2 - Inicie uma instância do servidor web](#inicie-uma-instância-do-servidor-web)
+- [✔️] [Tarefa 3 - Conecte-se à sua instância Linux (caso você use SO Linux)](#conecte-se-à-sua-instância-linux-caso-você-use-so-linux)
+- [✔️] [Tarefa 4 - Conecte-se à instância EC2 usando PuTTY (caso você use SO Windows)](#conecte-se-à-instância-ec2-usando-putty-caso-você-use-so-windows)
+- [✔️] [Tarefa 5 - Recursos de Limpeza](#recursos-de-limpeza)
+
 
 > ⚠️ **Nota sobre o laboratório**  
 > 
