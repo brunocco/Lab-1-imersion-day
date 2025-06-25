@@ -1,5 +1,5 @@
 # Lab-1-imersion-day
-Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criação e configuração de instâncias EC2, VPC, sub-redes e grupos de segurança. Foram exploradas opções de conexão entre as instâncias usando SSH, terminal Linux e AWS Session Manager.
+Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criação e configuração de instâncias EC2, Par de chaves e grupos de segurança. Foram exploradas opções de conexão entre as instâncias usando SSH e conexão via PUTTY.
 
 
 ## Laboratório prático do EC2 Linux
@@ -35,7 +35,7 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 >
 > 💲 [Calculadora de preços AWS](https://calculator.aws/#/)
 >
-> 🔒 **Importante:** Após concluir o laboratório, é altamente recomendável **encerrar todos os recursos criados** — como **instâncias EC2**, **VPCs**, **sub-redes** e **grupos de segurança** — para **evitar custos adicionais** em sua conta AWS.
+> 🔒 **Importante:** Após concluir o laboratório, é altamente recomendável **encerrar todos os recursos criados** — como **instâncias EC2** e **grupos de segurança**(apesar de nao ser cobrado) — para **evitar custos adicionais** e manter seu sistema limpo em sua conta AWS.
 
 
 
@@ -198,4 +198,18 @@ Excluir instância do Amazon EC2
 Você verá uma janela pop-up perguntando se tem certeza de que deseja encerrar esta instância. Clique em Encerrar .
 <img src="assets/19-ec2-lab-16.png">
 
-## 🎯 Pronto instancias encerradas e sem perigo de vir custos aicionais não esperados. Experiência adquirida com sucesso!!
+## 🎯 Conclusão do Laboratório
+
+✅ Parabéns! Você concluiu com sucesso este laboratório prático na AWS.
+
+Durante a atividade, você:
+
+- Criou um **par de chaves SSH** para autenticação segura;
+- Lançou uma **instância EC2** (servidor virtual na nuvem usado para hospedar aplicações e sites);
+- Configurou regras de **grupo de segurança** para acesso controlado via **SSH** e **HTTP**;
+- Acessou sua instância utilizando **SSH (Linux)** ou **PuTTY (Windows)**;
+- Instalou uma aplicação web básica (Apache + PHP);
+- E finalizou tudo com responsabilidade, **encerrando as instâncias** e evitando **custos adicionais desnecessários**. 💰
+
+📚 Essa foi uma excelente introdução ao uso do Amazon EC2 e à administração de servidores na nuvem com segurança e boas práticas. 🚀
+
