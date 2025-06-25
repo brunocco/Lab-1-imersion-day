@@ -198,4 +198,4 @@ Excluir instância do Amazon EC2
 Você verá uma janela pop-up perguntando se tem certeza de que deseja encerrar esta instância. Clique em Encerrar .
 <img src="assets/19-ec2-lab-16.png">
 
-> Pronto instancias encerradas e sem perigo de vir custos aicionais não esperados. Experiência adquirida com sucesso!!
+## 🎯 Pronto instancias encerradas e sem perigo de vir custos aicionais não esperados. Experiência adquirida com sucesso!!
