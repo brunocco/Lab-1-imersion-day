@@ -37,8 +37,21 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 Neste laboratório, você criará um par de chaves SSH que usará para acessar sua instância Linux EC2. Siga os passos abaixo para criar um par de chaves exclusivo para você.
 
 1. Navegue até o console do Amazon EC2 . No canto superior direito do AWS Management Console, confirme se você está na região AWS desejada.
-2. Clique em Pares de Chaves na seção Rede e Segurança, próximo ao final do menu à esquerda.
-<p align="center">
-  <img src="assets/2-ec2-lab-01.png" alt="Descrição da imagem" width="600" height="500">
-</p>
+2. Clique em **Pares de Chaves** na seção **Rede e Segurança**, próximo ao final do menu à esquerda.
+
 <img src="assets/2-ec2-lab-01.png">
+
+3. Clique em Criar **par de chaves** no canto superior direito para criar o novo par de chaves SSH.
+<img src="assets/3-ec2-lab-02.png">
+
+4. Digite **[Seu nome]-ImmersionDay-KeyPair** no nome do par de chaves.
+
+- Se você estiver usando Linux/Mac como sua máquina local, selecione o formato de arquivo de chave privada **.pem**.
+
+- Se você estiver usando o Windows como máquina local: Baixe o formato de arquivo **.ppk** ao criar seu par de chaves. Este formato é necessário para conexões PuTTY.
+
+5. Em seguida, clique em **Criar par de chaves**.
+<img src="assets/4-ec2-lab-03.png">
+
+6. Um arquivo chamado **[Seu Nome]-ImmersionDay.pem** será baixado para o seu disco local. Salve o arquivo no local de download padrão. Anote o caminho completo para o arquivo do par de chaves que você acabou de baixar.
+> Você usará o par de chaves que acabou de criar para gerenciar suas instâncias do EC2 durante o restante deste laboratório.
