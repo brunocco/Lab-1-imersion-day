@@ -55,3 +55,11 @@ Neste laboratório, você criará um par de chaves SSH que usará para acessar s
 
 6. Um arquivo chamado **[Seu Nome]-ImmersionDay.pem** será baixado para o seu disco local. Salve o arquivo no local de download padrão. Anote o caminho completo para o arquivo do par de chaves que você acabou de baixar.
 > Você usará o par de chaves que acabou de criar para gerenciar suas instâncias do EC2 durante o restante deste laboratório.
+
+## Inicie uma instância do servidor web
+Neste laboratório, você iniciará uma instância do Amazon Linux 2, inicializará o Apache/PHP e instalará uma página da web básica.
+
+1. Entre no AWS Management Console e abra o Amazon EC2 Console . No canto superior direito do AWS Management Console, confirme que você está na **região AWS** desejada (Usamos US East (Norte Virginia) - us-east-1) .
+
+2. No menu à esquerda, clique em **Painel** , em EC2. Em seguida, clique em **Iniciar instâncias**.
+<img src="5-ec2-lab-04.png">
