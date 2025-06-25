@@ -41,4 +41,4 @@ Neste laboratório, você criará um par de chaves SSH que usará para acessar s
 <p align="center">
   <img src="assets/2-ec2-lab-01.png" alt="Descrição da imagem" width="600" height="500">
 </p>
-![Texto alternativo](assets/2-ec2-lab-01.png)
+<img src="assets/2-ec2-lab-01.png">
