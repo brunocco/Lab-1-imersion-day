@@ -17,8 +17,9 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 ## Crie seu próprio servidor web seguindo os laboratórios na ordem abaixo:
 - [✔️] Tarefa 1 - Criar um novo par de chaves;
 - [✔️] Tarefa 2 - Inicie uma instância do servidor web;
-- [✔️] Tarefa 3 - Conecte-se à sua instância Linux.
-
+- [✔️] Tarefa 3 - Conecte-se à sua instância Linux (caso você use S.O. Linux)
+- [✔️] Tarefa 4 - Conecte-se à instância EC2 usando PuTTY (caso você use S.O. Windows)
+- [✔️] Tarefa 4 - Recursos de Limpeza
 
 > ⚠️ **Nota sobre o laboratório**  
 > 
@@ -142,4 +143,59 @@ Aguarde a instância passar pelas **Verificações de Status** para concluir o c
 Você deverá ver um site parecido com o seguinte:
 <img src="assets/13-ec2-lab-12.png">
 
-> Ao finalizar Você implantou um servidor e lançou um site em questão de minutos!
+> até aqui Você implantou um servidor e lançou um site em questão de minutos!
+
+## Conecte-se à sua instância Linux (caso você use S.O. Linux)
+> Para se conectar à instância Linux, você usará um cliente SSH. Se você usa o Windows como computador local, vá para a próxima seção, "Conectando-se à sua instância Linux usando o PuTTy" . Para usuários de Mac, use o terminal local.
+
+1. Localize seu servidor web navegando até o console do Amazon EC2 e selecionando **Instâncias** no menu do lado esquerdo.
+
+2. Clique na caixa de seleção ao lado do seu servidor web e, em seguida, clique no botão **Conectar**.
+<img src="assets/14-ec2-lab-13.png">
+
+3. Selecione **o cliente SSH** e siga as instruções para se conectar à sua instância.
+<img src="assets/15-ec2-lab-14.png">
+
+4. Navegue até o arquivo Downloads no seu computador local, onde sua chave privada está localizada. Em seguida, execute o comando chmod.
+
+5. Em seguida, conecte-se à sua instância usando seu DNS público executando o comando ssh.
+
+6. Digite **"sim"** para continuar conectando ao seu servidor web. Você pode conferir o resultado abaixo.
+<img src="assets/16-ec2-lab-15.png">
+
+> Pronto! Você se conectou à sua instância do Linux EC2 usando cliente SSH
+
+## Conecte-se à instância EC2 usando PuTTY (caso você use S.O. Windows)
+1. Abra o aplicativo PuTTY.
+
+2. No painel **Categoria** , escolha **Sessão**.
+
+3. Digite **ec2-user@[seu IP público do EC2 que você criou]** no campo **Nome do Host**.
+
+4. Defina o valor **da porta como 22**.
+<img src="assets/17-ec2-lab-16.png">
+
+5. Selecione SSH como o tipo de conexão .
+
+6. No painel **Categoria**, expanda Conexão, expanda **SSH** e escolha **Autenticação**.
+Complete o seguinte:
+- Selecione **Procurar**.
+- Selecione o .ppkarquivo que você gerou para seu par de chaves e escolha **Abrir**.
+
+7. Se esta for a primeira vez que você se conecta a esta instância, o PuTTY exibirá uma caixa de diálogo de alerta de segurança perguntando se você confia no host ao qual está se conectando. Selecione **Sim**. Uma janela será aberta. Faça login como **usuário ec2** e você estará conectado à sua instância.
+
+> Pronto! Você se conectou à sua instância do Linux EC2 usando PUTTY
+
+## Recursos de limpeza
+Excluir instância do Amazon EC2
+1. Navegue até o console do Amazon EC2 .
+
+2. No painel de navegação, em **Instâncias**, escolha **Instâncias**. Em seguida, escolha a instância do EC2 que você criou neste laboratório.
+
+3. No menu suspenso **Estado da instância**, selecione **Encerrar (excluir) instância**.
+<img src="assets/18-ec2-lab-17.png">
+
+Você verá uma janela pop-up perguntando se tem certeza de que deseja encerrar esta instância. Clique em Encerrar .
+<img src="assets/19-ec2-lab-16.png">
+
+> Pronto instancias encerradas e sem perigo de vir custos aicionais não esperados. Experiência adquirida com sucesso!!
