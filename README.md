@@ -18,3 +18,27 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 - [✔️] Tarefa 1 - Criar um novo par de chaves;
 - [✔️] Tarefa 2 - Inicie uma instância do servidor web;
 - [✔️] Tarefa 3 - Conecte-se à sua instância Linux.
+
+
+> ⚠️ **Nota sobre o laboratório**  
+> 
+> 🕒 **Duração estimada:** aproximadamente **1 hora** para conclusão.  
+> 💸 **Custos aproximados do workshop:**
+
+| Serviço             | Custo por hora | Custo mensal |
+|---------------------|----------------|---------------|
+| Amazon EC2 - t2.micro | $0.0116        | $8.47         |
+| Amazon EBS - 8 GB     | $0.0008        | $0.64         |
+
+> 💰 **Custo total estimado do workshop:** **$0.0124 por hora** (~**$0.50** para o laboratório completo).
+[Calculadora de rpeços AWS](https://calculator.aws/#/)
+
+## Criar um novo par de chaves
+Neste laboratório, você criará um par de chaves SSH que usará para acessar sua instância Linux EC2. Siga os passos abaixo para criar um par de chaves exclusivo para você.
+
+1. Navegue até o console do Amazon EC2 . No canto superior direito do AWS Management Console, confirme se você está na região AWS desejada.
+2. Clique em Pares de Chaves na seção Rede e Segurança, próximo ao final do menu à esquerda.
+<p align="center">
+  <img src="assets/2-ec2-lab-01.png" alt="Descrição da imagem" width="600" height="500">
+</p>
+![Texto alternativo](assets/2-ec2-lab-01.png)
