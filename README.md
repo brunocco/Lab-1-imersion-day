@@ -31,7 +31,12 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 | Amazon EBS - 8 GB     | $0.0008        | $0.64         |
 
 > 💰 **Custo total estimado do workshop:** **$0.0124 por hora** (~**$0.50** para o laboratório completo).
-[Calculadora de rpeços AWS](https://calculator.aws/#/)
+>
+> 💲 [Calculadora de preços AWS](https://calculator.aws/#/)
+>
+> 🔒 **Importante:** Após concluir o laboratório, é altamente recomendável **encerrar todos os recursos criados** — como **instâncias EC2**, **VPCs**, **sub-redes** e **grupos de segurança** — para **evitar custos adicionais** em sua conta AWS.
+
+
 
 ## Criar um novo par de chaves
 Neste laboratório, você criará um par de chaves SSH que usará para acessar sua instância Linux EC2. Siga os passos abaixo para criar um par de chaves exclusivo para você.
@@ -62,4 +67,79 @@ Neste laboratório, você iniciará uma instância do Amazon Linux 2, inicializa
 1. Entre no AWS Management Console e abra o Amazon EC2 Console . No canto superior direito do AWS Management Console, confirme que você está na **região AWS** desejada (Usamos US East (Norte Virginia) - us-east-1) .
 
 2. No menu à esquerda, clique em **Painel** , em EC2. Em seguida, clique em **Iniciar instâncias**.
-<img src="5-ec2-lab-04.png">
+<img src="assets/5-ec2-lab-04.png">
+
+3. Em **Nome** , digite o valor **Servidor Web para IMD**. Em **Imagens de Aplicativo e SO (Imagem de Máquina da Amazon)**, deixe as configurações padrão.
+<img src="assets/6-ec2-lab-05.png">
+
+4. Selecione **t2.micro** em **Tipo de instância**.
+<img src="assets/7-ec2-lab-06.png">
+
+5. Selecione o par de chaves que você criou no início deste laboratório no menu suspenso.
+<img src="assets/8-ec2-lab-07.png">
+
+6. Em **Configurações de rede**, clique em **Editar**.
+<img src="assets/9-ec2-lab-08.png">
+
+7. Deixe os valores padrão para **VPC** e **sub-rede** . **A atribuição automática de IP público** precisa ser definida para **habilitar**.
+
+8. Em **Firewall (grupos de segurança)**, escolha **Criar grupo de segurança**. Digite **Dia de Imersão - Servidor Web** em Nome do grupo de segurança e Descrição.
+
+9. Para **a regra de grupo de segurança 1** , deixe o **tipo** como **ssh** e altere **o Tipo de origem** para **Meu IP**.
+
+10. Em seguida, selecione **Adicionar regra de grupo de segurança**.
+
+11. Para **a regra de grupo de segurança 2** , defina o **Tipo** como **HTTP** e o **Tipo de origem** como **Meu IP** .
+<img src="assets/10-ec2-lab-09.png">
+
+12. Deixe os valores padrão em Configurar armazenamento
+
+13. Expanda os **Detalhes Avançados** . Em **Versão de Metadados**, selecione **Somente V2 (token necessário)** . Em **Dados do Usuário** , copie e cole o seguinte script
+> copie clicando no ícone de cópia no canto superior direito.
+```bash
+#!/bin/sh
+​
+#Install a LAMP stack
+dnf install -y httpd wget php-fpm php-mysqli php-json php php-devel
+dnf install -y mariadb105-server
+dnf install -y httpd php-mbstring
+​
+#Start the web server
+chkconfig httpd on
+systemctl start httpd
+​
+#Install the web pages for our lab
+if [ ! -f /var/www/html/immersion-day-app-php7.zip ]; then
+   cd /var/www/html
+   wget -O 'immersion-day-app-php7.zip' 'https://static.us-east-1.prod.workshops.aws/ec4201ed-3f11-4553-98fa-fca51877e686/assets/immersion-day-app-php7.zip?Key-Pair-Id=K36Q2WVO3JP7QD&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9zdGF0aWMudXMtZWFzdC0xLnByb2Qud29ya3Nob3BzLmF3cy9lYzQyMDFlZC0zZjExLTQ1NTMtOThmYS1mY2E1MTg3N2U2ODYvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MTQ3MTg3OH19fV19&Signature=d89x9eb1JjUqKsDDvumRFs5e-n~7oLDJ9M41jcek6kJoSiflRU8MKnj8~UIZWfmA~nqD47V7NM6IVJ1njhR8k1AJop4L6HlcA6M9Z7kUFFQddM0PLvTePm07eWkdrezVTQS1VZ3N6hglzJSQkB4sh7bjFZ4vQQAgCq0z8bmJuf7PPLrAjLTj2hv1m7CWRlLaEeeJL2jMGnEi2eze7O3IiYDQEYeU-Fxm8Jy1tfcbeKVAyPwrieV46B~GMehhYQ~gdfnNEsYW0jWVtrmH7ilR2W7FNuuRomhLlS40784hvXQdJX7OkOYyprsU1zYAVd7TA2EG8EO6IKbft0mQDZnsXA__'
+   unzip immersion-day-app-php7.zip
+fi
+​
+#Install the AWS SDK for PHP
+if [ ! -f /var/www/html/aws.zip ]; then
+   cd /var/www/html
+   mkdir vendor
+   cd vendor
+   wget https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip
+   unzip aws.zip
+fi 
+
+#Update existing packages
+dnf update -y
+````
+
+14. Selecione **Iniciar instância**.
+<img src="assets/11-ec2-lab-10.png">
+
+15. Selecione **Exibir todas as instâncias** no canto inferior direito para encontrar o servidor Web que você acabou de criar.
+
+16. Clique na caixa de seleção ao lado do seu servidor web para visualizar detalhes sobre esta instância EC2. Encontre o **DNS público**; você usará este endereço mais tarde.
+<img src="assets/12-ec2-lab-11.png">
+
+17. Navegar no servidor web
+Aguarde a instância passar pelas **Verificações de Status** para concluir o carregamento. Abra uma nova aba do navegador e navegue pelo Servidor Web inserindo **o endereço DNS público** da sua instância EC2 .
+> Se você estiver usando o navegador Chrome, ao colar o valor **DNS público** no navegador, ele poderá não funcionar se https for adicionado automaticamente antes do valor DNS. Portanto, é recomendável inserir **http://**.
+Você deverá ver um site parecido com o seguinte:
+<img src="assets/13-ec2-lab-12.png">
+
+> Ao finalizar Você implantou um servidor e lançou um site em questão de minutos!
