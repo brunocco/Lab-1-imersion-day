@@ -1,4 +1,4 @@
-# Lab-1-imersion-day
+# Laboratório 1 - Imersion Day AWS 2025
 Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criação e configuração de instâncias EC2, Par de chaves e grupos de segurança. Foram exploradas opções de conexão entre as instâncias usando SSH e conexão via PUTTY.
 
 
