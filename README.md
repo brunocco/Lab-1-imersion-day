@@ -20,7 +20,7 @@ Laboratório realizado durante o AWS Immersion Day (Dia 1), com foco na criaçã
 - [✔️] [Tarefa 1 - Criar um novo par de chaves](#criar-um-novo-par-de-chaves)
 - [✔️] [Tarefa 2 - Inicie uma instância do servidor web](#inicie-uma-instância-do-servidor-web)
 - [✔️] [Tarefa 3 - Conecte-se à sua instância Linux (caso você use SO Linux)](#conecte-se-à-sua-instância-linux-caso-você-use-so-linux)
-- [✔️] [Tarefa 4 - Conecte-se à instância EC2 usando PuTTY (caso você use SO Windows)](#conecte-se-à-instância-ec2-usando-putty-caso-você-use-so-windows)
+- [✔️] [Tarefa 4 - Conecte-se à instância EC2 usando PUTTY (caso você use SO Windows)](#conecte-se-à-instância-ec2-usando-putty-caso-você-use-so-windows)
 - [✔️] [Tarefa 5 - Recursos de Limpeza](#recursos-de-limpeza)
 
 
@@ -149,7 +149,8 @@ Você deverá ver um site parecido com o seguinte:
 > até aqui Você implantou um servidor e lançou um site em questão de minutos!
 
 ## Conecte-se à sua instância Linux (caso você use S.O. Linux)
-> Para se conectar à instância Linux, você usará um cliente SSH. Se você usa o Windows como computador local, vá para a próxima seção, "Conectando-se à sua instância Linux usando o PuTTy" . Para usuários de Mac, use o terminal local.
+> Para se conectar à instância Linux, você usará um cliente SSH. Se você usa o Windows como computador local, vá para a próxima seção, [Conectando-se à sua instância Linux usando o PuTTY](#conecte-se-à-instância-ec2-usando-putty-caso-você-use-so-windows)
+ . Para usuários de Mac, use o terminal local.
 
 1. Localize seu servidor web navegando até o console do Amazon EC2 e selecionando **Instâncias** no menu do lado esquerdo.
 
